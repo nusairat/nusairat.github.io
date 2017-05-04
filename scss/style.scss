@@ -55,34 +55,41 @@ body {
       width: inherit;
     }
   }
-  
-  .titles {
-    $titles-width: 14.65em;
-    width: $titles-width;
-    margin: 0 0 0 (- $titles-width / 2);
-    top: auto;
-    bottom: 0;
-  	height: 70em;
-  	font-size: 350%;
-  	text-align: justify;
-	  overflow: hidden;
-    transform-origin: 50% 100%;
-    @include transform(perspective(300px) rotateX(25deg));
-  
-    > div {
-	    position: absolute;
-	    top: 100%;
-	    animation: titles 11s linear 5s;
-    
-      > p {
-	      margin: 1.35em 0 1.85em 0;
-        line-height: 1.35em;
-        
-        @include backface-visibility(hidden);
-      }
-    }
-  }
 }
+
+/* Custom copy start */
+.starwars .titles {
+  width: 14.65em;
+  margin: 0 0 0 -7.325em;
+  top: auto;
+  bottom: 0;
+  height: 50em;
+  font-size: 350%;
+  text-align: justify;
+  overflow: hidden;
+  word-wrap: break-word;
+  transform-origin: 50% 100%;
+  -moz-transform: perspective(300px) rotateX(25deg);
+  -o-transform: perspective(300px) rotateX(25deg);
+  -ms-transform: perspective(300px) rotateX(25deg);
+  -webkit-transform: perspective(300px) rotateX(25deg);
+  transform: perspective(300px) rotateX(25deg); }
+  .starwars .titles > div {
+    position: absolute;
+    top: 100%;
+    animation: titles 73s linear 13s; }
+    .starwars .titles > div > p {
+      margin: 1.35em 0 1.85em 0;
+      line-height: 1.35em;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      -o-backface-visibility: hidden;
+      backface-visibility: hidden; }
+    .starwars .titles > div .tcenter {
+      margin: 1.35em 0 -1em 0;
+      text-align: center; }
+/* Custom copy end */
 
 @keyframes intro {
   0% {
